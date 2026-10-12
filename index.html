@@ -1,0 +1,1219 @@
+<title>Cyfrowe Zdrowie i Świadome Technologie</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root {
+  --bg-primary: #FAFAF7;
+  --bg-secondary: #F2F0EB;
+  --text-primary: #2A2826;
+  --text-secondary: #5A5654;
+  --accent: #4A5568;
+  --accent-hover: #3A4558;
+  --clay: #A67C52;
+  --border: #D4CFC6;
+  --highlight: #FFF8E7;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-primary: #1C1B19;
+    --bg-secondary: #252321;
+    --text-primary: #E8E6E3;
+    --text-secondary: #B8B6B3;
+    --accent: #7B8BA3;
+    --accent-hover: #8B9BB3;
+    --clay: #C29A6B;
+    --border: #3A3835;
+    --highlight: #2D2A23;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #1C1B19;
+  --bg-secondary: #252321;
+  --text-primary: #E8E6E3;
+  --text-secondary: #B8B6B3;
+  --accent: #7B8BA3;
+  --accent-hover: #8B9BB3;
+  --clay: #C29A6B;
+  --border: #3A3835;
+  --highlight: #2D2A23;
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  padding-block: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  padding: 48px 32px;
+  overflow-y: auto;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.nav-header {
+  margin-bottom: 32px;
+}
+
+.nav-title {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.nav-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 16px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border-left-color: var(--accent);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  background: var(--bg-primary);
+  border-left-color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 101;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  background: var(--bg-primary);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-primary);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  margin-left: 280px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+h1, h2, h3 {
+  font-family: 'Crimson Text', Georgia, serif;
+  text-wrap: balance;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-top: 80px;
+  margin-bottom: 32px;
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  max-width: 680px;
+}
+
+.intro {
+  margin-bottom: 64px;
+  padding-bottom: 48px;
+  border-bottom: 2px solid var(--border);
+}
+
+.intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 65ch;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+.section-intro {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 65ch;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.book-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 2px;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.book-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.book-title {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 1rem;
+  color: var(--clay);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.book-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.book-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.book-link {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.book-link:hover {
+  background: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.authors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.author-item {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--clay);
+  border-radius: 2px;
+}
+
+.author-name {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.author-specialty {
+  font-size: 0.875rem;
+  color: var(--clay);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.author-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.resource-item {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.resource-item:hover {
+  background: var(--bg-secondary);
+}
+
+.resource-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.resource-meta {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.resource-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.resource-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.resource-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.callout {
+  background: var(--highlight);
+  border-left: 4px solid var(--accent);
+  padding: 24px 28px;
+  margin: 48px 0;
+  border-radius: 2px;
+}
+
+.callout-title {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.callout p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.about-content h3 {
+  font-size: 1.375rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.about-content h3:first-child {
+  margin-top: 0;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  max-width: 65ch;
+}
+
+.contact-info {
+  background: var(--bg-secondary);
+  padding: 28px;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.contact-form {
+  margin-top: 24px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+  margin-top: 24px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(74, 85, 104, 0.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button[type="submit"] {
+  background: var(--accent);
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 32px;
+  font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.contact-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.who-guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.who-card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.who-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.who-age {
+  background: var(--accent);
+  color: #FFFFFF;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.who-recommendation {
+  padding: 28px;
+}
+
+.who-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.who-recommendation h3 {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.who-recommendation > p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.who-details {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.who-details strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.who-details ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.who-details li {
+  margin-bottom: 8px;
+}
+
+.who-details li:last-child {
+  margin-bottom: 0;
+}
+
+.key-concepts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.concept-card {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border-top: 3px solid var(--accent);
+  border-radius: 2px;
+}
+
+.concept-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.concept-text {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+@media (max-width: 1024px) {
+  .nav-container {
+    transform: translateX(-100%);
+  }
+
+  .nav-container.open {
+    transform: translateX(0);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .container {
+    padding-top: 96px;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    margin-top: 56px;
+  }
+
+  .container {
+    padding: 96px 20px 72px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .key-concepts {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav class="nav-container" id="navContainer">
+  <div class="nav-header">
+    <div class="nav-title">Cyfrowe Zdrowie</div>
+    <div class="nav-subtitle">Nawigacja po przewodniku</div>
+  </div>
+  <div class="nav-links">
+    <a href="#introduction" class="nav-link">Wprowadzenie</a>
+    <a href="#key-concepts" class="nav-link">Kluczowe Pojęcia</a>
+    <a href="#who-guidelines" class="nav-link">Wytyczne WHO</a>
+    <a href="#essential-reading" class="nav-link">Lektury Podstawowe</a>
+    <a href="#key-thinkers" class="nav-link">Kluczowi Myśliciele</a>
+    <a href="#research" class="nav-link">Badania i Publikacje</a>
+    <a href="#practical" class="nav-link">Praktyczne Podejścia</a>
+    <a href="#about" class="nav-link">O Nas</a>
+  </div>
+</nav>
+
+<div class="main-content">
+<div class="container">
+  <header class="intro" id="introduction">
+    <h1>Cyfrowe Zdrowie i Świadome Technologie</h1>
+    <p class="lead">Zbiór badań, przemyśleń i wskazówek dotyczących świadomego korzystania z technologii—szczególnie dla rodzin wychowujących dzieci w erze cyfrowej.</p>
+
+    <div class="callout" style="margin-top: 32px; margin-bottom: 32px;">
+      <div class="callout-title">O tej stronie</div>
+      <p>Ta strona powstała w odpowiedzi na liczne pytania od osób poszukujących źródeł, materiałów, książek i publikacji na temat świadomego korzystania z technologii, demencji cyfrowej i wychowania dzieci z elektroniką. Zamiast odpowiadać na te same pytania wielokrotnie, stworzyliśmy to centralne miejsce, które gromadzi najważniejsze zasoby i głosy w tej dziedzinie.</p>
+    </div>
+
+    <p>Nasza relacja z technologią fundamentalnie zmieniła sposób, w jaki myślimy, uczymy się i nawiązujemy kontakty. Od uzależnienia od smartfonów po demencję cyfrową, wpływy są głębokie i zasługują na przemyślaną uwagę. Ten zasób gromadzi kluczowe głosy, badania oparte na dowodach oraz praktyczną mądrość dla każdego, kto pragnie bardziej świadomej relacji ze swoimi urządzeniami.</p>
+
+    <p>Celem nie jest technologiczna abstynencja, lecz świadomość—zrozumienie kompromisów, rozpoznawanie wzorców i podejmowanie świadomych wyborów dotyczących tego, kiedy i jak angażujemy się w korzystanie z narzędzi cyfrowych.</p>
+  </header>
+
+  <div class="callout">
+    <div class="callout-title">Dlaczego to ważne</div>
+    <p>Średni dzienny czas spędzany przed ekranem wzrósł o 50% w ciągu ostatniej dekady. Dzieci spędzają obecnie więcej czasu przed ekranami niż w szkole. Skutki dla zdolności koncentracji, kształtowania pamięci i rozwoju społecznego dopiero zaczynamy rozumieć.</p>
+    <p>Te zmiany nie są nieuniknione—są wynikiem decyzji projektowych zoptymalizowanych pod kątem zaangażowania, a nie dobrostanu. Zrozumienie mechanizmów to pierwszy krok w kierunku odzyskania sprawczości.</p>
+  </div>
+
+  <section class="section" id="key-concepts">
+    <h2>Kluczowe Pojęcia</h2>
+
+    <div class="key-concepts">
+      <div class="concept-card">
+        <div class="concept-label">Demencja Cyfrowa</div>
+        <div class="concept-text">Termin opisujący spadek funkcji kognitywnych związany z nadmiernym korzystaniem z urządzeń cyfrowych, szczególnie wpływający na pamięć i systemy uwagi, które nasze urządzenia coraz częściej obsługują za nas.</div>
+      </div>
+
+      <div class="concept-card">
+        <div class="concept-label">Ekonomia Uwagi</div>
+        <div class="concept-text">Model biznesowy, w którym aplikacje i platformy konkurują o naszą ograniczoną uwagę, wykorzystując techniki psychologiczne do maksymalizacji zaangażowania i czasu spędzonego w nich.</div>
+      </div>
+
+      <div class="concept-card">
+        <div class="concept-label">Odciążanie Poznawcze</div>
+        <div class="concept-text">Praktyka polegająca na poleganiu na urządzeniach zewnętrznych (telefony, GPS, wyszukiwarki) w wykonywaniu zadań poznawczych, potencjalnie atrofiując nasze własne zdolności umysłowe.</div>
+      </div>
+
+      <div class="concept-card">
+        <div class="concept-label">Higiena Cyfrowa</div>
+        <div class="concept-text">Praktyki i granice, które pomagają utrzymać zdrową relację z technologią—podobnie jak higiena fizyczna, ale dla naszego cyfrowego życia.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="who-guidelines">
+    <h2>Wytyczne Światowej Organizacji Zdrowia</h2>
+    <p class="section-intro">Rekomendacje WHO dotyczące czasu ekranowego dla dzieci, oparte na badaniach naukowych i analizie wpływu ekranów na rozwój fizyczny i poznawczy.</p>
+
+    <div class="callout" style="margin-bottom: 40px;">
+      <div class="callout-title">Dlaczego WHO wydała wytyczne?</div>
+      <p>W 2019 roku Światowa Organizacja Zdrowia po raz pierwszy wydała szczegółowe wytyczne dotyczące aktywności fizycznej, zachowań sedenteryjnych i snu dla dzieci poniżej 5. roku życia. Wytyczne te powstały w odpowiedzi na rosnące obawy dotyczące wpływu nadmiernego czasu ekranowego na zdrowie i rozwój najmłodszych dzieci.</p>
+    </div>
+
+    <div class="who-guidelines-grid">
+      <div class="who-card">
+        <div class="who-age">Poniżej 1. roku życia</div>
+        <div class="who-recommendation">
+          <div class="who-icon">📵</div>
+          <h3>Brak czasu ekranowego</h3>
+          <p>Niemowlęta nie powinny być narażone na żadne ekrany (telewizja, tablet, smartfon, komputer).</p>
+          <div class="who-details">
+            <strong>Dlaczego:</strong>
+            <ul>
+              <li>Kluczowy okres rozwoju mózgu</li>
+              <li>Potrzeba interakcji twarzą w twarz</li>
+              <li>Rozwój więzi z opiekunami</li>
+              <li>Eksploracja fizycznego świata</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-age">1-2 lata</div>
+        <div class="who-recommendation">
+          <div class="who-icon">⏱️</div>
+          <h3>Brak ekranów lub minimalne narażenie</h3>
+          <p>Dzieci w wieku 1 roku nie powinny mieć czasu ekranowego. Dla dzieci 2-letnich, czas ekranowy sedenteryjny nie powinien przekraczać 1 godziny dziennie—mniej jest lepiej.</p>
+          <div class="who-details">
+            <strong>Zalecenia:</strong>
+            <ul>
+              <li>Priorytet dla aktywności fizycznej</li>
+              <li>Czytanie książek z opiekunem</li>
+              <li>Zabawy rozwijające wyobraźnię</li>
+              <li>Jeśli ekrany, to tylko treści wysokiej jakości z opiekunem</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-age">3-4 lata</div>
+        <div class="who-recommendation">
+          <div class="who-icon">⏰</div>
+          <h3>Maksymalnie 1 godzina dziennie</h3>
+          <p>Czas ekranowy sedenteryjny nie powinien przekraczać 1 godziny dziennie—mniej jest lepiej. Treści powinny być wysokiej jakości, oglądane razem z opiekunem.</p>
+          <div class="who-details">
+            <strong>Kluczowe zasady:</strong>
+            <ul>
+              <li>Współoglądanie i omawianie treści</li>
+              <li>Wybór programów edukacyjnych</li>
+              <li>Unikanie ekranów przed snem</li>
+              <li>Nigdy nie używać ekranów jako "niani"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-age">5+ lat</div>
+        <div class="who-recommendation">
+          <div class="who-icon">⚖️</div>
+          <h3>Świadome ograniczenia</h3>
+          <p>Chociaż WHO nie podaje konkretnego limitu dla starszych dzieci, zaleca ograniczenie czasu ekranowego i priorytetyzowanie aktywności fizycznej, snu oraz interakcji społecznych.</p>
+          <div class="who-details">
+            <strong>Zasady dla rodziców:</strong>
+            <ul>
+              <li>Ustalenie jasnych zasad rodzinnych</li>
+              <li>Strefy wolne od ekranów (sypialnia, stoł)</li>
+              <li>Modelowanie zdrowych nawyków</li>
+              <li>Zachęcanie do aktywności fizycznej (min. 60 min/dzień)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 48px;">
+      <div class="callout-title">Ważne uwagi</div>
+      <p><strong>Jakość treści ma znaczenie:</strong> Nie wszystkie ekrany są równe. Programy edukacyjne oglądane wspólnie z rodzicem mają inny wpływ niż pasywne oglądanie reklam czy nieodpowiednich treści.</p>
+      <p><strong>Kontekst jest kluczowy:</strong> Rozmowa wideo z babcią to co innego niż gra mobilna. Rodzice powinni oceniać zarówno czas, jak i rodzaj korzystania z ekranów.</p>
+      <p><strong>To wytyczne, nie prawa:</strong> WHO podkreśla, że są to rekomendacje oparte na najlepszych dostępnych dowodach, a rodzice powinni stosować je z rozsądkiem w kontekście swojej sytuacji rodzinnej.</p>
+    </div>
+
+    <div style="margin-top: 48px; padding: 28px; background: var(--bg-secondary); border-radius: 2px; border-left: 4px solid var(--clay);">
+      <h3 style="margin-top: 0; margin-bottom: 16px; font-size: 1.25rem;">Źródła i dalsze materiały</h3>
+      <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+        <li style="margin-bottom: 12px;">
+          <strong>WHO Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age</strong> (2019)
+          <br><a href="https://www.who.int/publications/i/item/9789241550536" target="_blank" rel="noopener" style="font-size: 0.875rem; color: var(--accent);">who.int/publications</a>
+        </li>
+        <li style="margin-bottom: 12px;">
+          <strong>To grow up healthy, children need to sit less and play more</strong> - Komunikat prasowy WHO
+          <br><a href="https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" target="_blank" rel="noopener" style="font-size: 0.875rem; color: var(--accent);">who.int/news</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="essential-reading">
+    <h2>Lektury Podstawowe</h2>
+    <p class="section-intro">Książki oferujące głębokie wglądy w to, jak technologia kształtuje nasze umysły, rozwój naszych dzieci oraz naszą zdolność do skupionej uwagi.</p>
+
+    <div class="books-grid">
+      <div class="book-card">
+        <div class="book-title">Płycizny. Co Internet robi z naszym mózgiem</div>
+        <div class="book-author">Nicholas Carr</div>
+        <div class="book-description">Przełomowa praca badająca, jak internet restrukturyzuje nasze ścieżki neuronowe, zmniejszając naszą zdolność do głębokiego czytania i kontemplacji. Carr analizuje neurologiczne dowody stojące za naszą coraz bardziej rozdrobnioną uwagą.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=P%C5%82ycizny%20Nicholas%20Carr" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=P%C5%82ycizny+Nicholas+Carr" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">Skradziona uwaga. Dlaczego nie możemy się skupić</div>
+        <div class="book-author">Johann Hari</div>
+        <div class="book-description">Śledztwo dotyczące systemowych sił erodujących naszą zbiorową zdolność do koncentracji. Hari podróżuje po świecie, przeprowadzając wywiady z ekspertami, aby zrozumieć uwagę jako kryzys zarówno osobisty, jak i społeczny.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=Skradziona%20uwaga%20Johann%20Hari" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Skradziona+uwaga+Johann+Hari" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">Pokolenie lęku</div>
+        <div class="book-author">Jonathan Haidt</div>
+        <div class="book-description">Analizuje kryzys zdrowia psychicznego wśród pokolenia Z, łącząc adopcję smartfonów i korzystanie z mediów społecznościowych z bezprecedensowymi poziomami lęku i depresji u nastolatków. Zawiera praktyczne wskazówki dla rodziców i nauczycieli.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=Pokolenie%20l%C4%99ku%20Jonathan%20Haidt" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Anxious+Generation+Jonathan+Haidt" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">Nie do oderwania. Jak technologia nas uzależnia</div>
+        <div class="book-author">Adam Alter</div>
+        <div class="book-description">Profesor psychologii ujawnia, jak aplikacje i cyfrowe doświadczenia są zaprojektowane tak, aby uzależniać, wykorzystując te same mechanizmy psychologiczne co hazard i uzależnienia od substancji.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=Nie%20do%20oderwania%20Adam%20Alter" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Irresistible+Adam+Alter" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">How to Break Up with Your Phone</div>
+        <div class="book-author">Catherine Price</div>
+        <div class="book-description">Praktyczny 30-dniowy plan tworzenia zdrowszej relacji ze smartfonem. Łączy badania nad uzależnieniem od telefonu z konkretnymi strategiami redukcji zależności.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=How%20to%20Break%20Up%20with%20Your%20Phone" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=How+to+Break+Up+with+Your+Phone+Catherine+Price" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">Minimalizm cyfrowy</div>
+        <div class="book-author">Cal Newport</div>
+        <div class="book-description">Filozofia korzystania z technologii, która kładzie nacisk na celowe przyjmowanie narzędzi, które naprawdę służą naszym wartościom, a pewnie ignoruje resztę. Zawiera proces porządkowania do zresetowania cyfrowego życia.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=Minimalizm%20cyfrowy%20Cal%20Newport" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Digital+Minimalism+Cal+Newport" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">Glow Kids</div>
+        <div class="book-author">Nicholas Kardaras</div>
+        <div class="book-description">Kliniczna perspektywa na uzależnienie od ekranów u dzieci, porównująca neurologiczny wpływ do uzależnienia od narkotyków. Napisana przez psychologa leczącego cyfrowe uzależnienie u nastolatków.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=Glow%20Kids%20Nicholas%20Kardaras" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Glow+Kids+Nicholas+Kardaras" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">The Tech-Wise Family</div>
+        <div class="book-author">Andy Crouch</div>
+        <div class="book-description">Praktyczna mądrość dla rodzin starających się świadomie korzystać z technologii. Koncentruje się na tworzeniu domowych rytmów i przestrzeni, które priorytetyzują rzeczywiste połączenia nad cyfrowym zaangażowaniem.</div>
+        <div class="book-links">
+          <a href="https://www.allegro.pl/listing?string=Tech%20Wise%20Family%20Andy%20Crouch" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Tech+Wise+Family+Andy+Crouch" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-title">Dzieci ekranu. Jak uzależnienie od ekranu przejmuje kontrolę nad dziećmi</div>
+        <div class="book-author">Nicholas Kardaras (wydanie polskie)</div>
+        <div class="book-description">Polskie wydanie klinicznej analizy uzależnienia dzieci od ekranów. Kardaras, psycholog specjalizujący się w leczeniu cyfrowych uzależnień u młodzieży, przedstawia neurologiczne mechanizmy uzależnienia porównywalne do narkotyków. Obowiązkowa lektura dla polskich rodziców.</div>
+        <div class="book-links">
+          <a href="https://allegro.pl/oferta/dzieci-ekranu-jak-uzaleznienie-od-ekranu-przejmuje-kontrole-nad-dziecmi-18325472492" class="book-link" target="_blank" rel="noopener">Allegro</a>
+          <a href="https://www.amazon.pl/s?k=Dzieci+ekranu+Nicholas+Kardaras" class="book-link" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="key-thinkers">
+    <h2>Kluczowi Myśliciele i Badacze</h2>
+    <p class="section-intro">Naukowcy, klinicyści i pisarze, których prace rzucają światło na różne aspekty naszego cyfrowego położenia.</p>
+
+    <div class="authors-list">
+      <div class="author-item">
+        <div class="author-name">Sherry Turkle</div>
+        <div class="author-specialty">Profesor MIT · Psychologia Społeczna</div>
+        <div class="author-bio">Pionierska badaczka interakcji człowiek-technologia. Jej prace eksplorują, jak urządzenia cyfrowe wpływają na rozmowę, empatię i samotność. Wybitne książki obejmują <em>Reclaiming Conversation</em> i <em>Alone Together</em>, które badają, jak ciągła łączność zmniejsza naszą zdolność do znaczących ludzkich połączeń.</div>
+      </div>
+
+      <div class="author-item">
+        <div class="author-name">Cal Newport</div>
+        <div class="author-specialty">Profesor Informatyki · Autor</div>
+        <div class="author-bio">Orędownik "głębokiej pracy" i minimalizmu cyfrowego jako przeciw-ruchów do ekonomii uwagi. Jego badania pokazują, że zdolność do skupienia bez rozproszenia staje się coraz rzadsza—i bardziej wartościowa. Dostarcza konkretnych strategii kultywowania skupienia w rozproszonym świecie.</div>
+      </div>
+
+      <div class="author-item">
+        <div class="author-name">Jean M. Twenge</div>
+        <div class="author-specialty">Psycholog · Badania Pokoleniowe</div>
+        <div class="author-bio">Śledzi zmiany w zachowaniu nastolatków między pokoleniami. Jej analiza wielkich zbiorów danych ujawnia wyraźne różnice w pokoleniu wychowanym ze smartfonami (iGen), w tym wyższe wskaźniki depresji, lęku i samotności, wraz z późniejszym rozwojem niezależności.</div>
+      </div>
+
+      <div class="author-item">
+        <div class="author-name">Tristan Harris</div>
+        <div class="author-specialty">Były Designer Google · Etyk</div>
+        <div class="author-bio">Założył Center for Humane Technology po pracy wewnątrz branży technologicznej. Jego perspektywa insidera ujawnia, jak platformy celowo projektują uzależniające funkcje. Występuje prominentnie w dokumencie <em>Dylemat społeczny</em>.</div>
+      </div>
+
+      <div class="author-item">
+        <div class="author-name">Manfred Spitzer</div>
+        <div class="author-specialty">Neurobiolog · Psychiatra</div>
+        <div class="author-bio">Niemiecki badacz skupiony na neurologicznych wpływach korzystania z mediów cyfrowych, szczególnie u dzieci. Jego prace nad "demencją cyfrową" badają, jak zlecanie zadań poznawczych urządzeniom może upośledzać rozwój i funkcjonowanie mózgu.</div>
+      </div>
+
+      <div class="author-item">
+        <div class="author-name">Catherine Steiner-Adair</div>
+        <div class="author-specialty">Psycholog Kliniczny · Terapeuta Rodzinny</div>
+        <div class="author-bio">Specjalizuje się w dzieciach, rodzinach i społecznościach szkolnych poruszających się w cyfrowych wyzwaniach. Autorka <em>The Big Disconnect</em>, która bada, jak własne korzystanie rodziców z urządzeń wpływa na poczucie bycia wysłuchanym i docenionym u dzieci.</div>
+      </div>
+
+      <div class="author-item">
+        <div class="author-name">Prof. Mariusz Jędrzejko</div>
+        <div class="author-specialty">Pedagog · Uniwersytet Śląski</div>
+        <div class="author-bio">Polski pedagog i badacz specjalizujący się w uzależnieniach behawioralnych, w tym uzależnieniu od technologii cyfrowych i ich wpływie na rozwój dzieci i młodzieży. Prowadzi szeroko zakrojone badania nad skutkami nadmiernego korzystania z urządzeń elektronicznych. Autor licznych publikacji i wywiadów dotyczących świadomego wychowania w erze cyfrowej.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="research">
+    <h2>Badania i Publikacje</h2>
+    <p class="section-intro">Badania akademickie, raporty i artykuły dostarczające perspektyw opartych na dowodach dotyczących wpływu technologii.</p>
+
+    <div class="callout" style="margin-bottom: 40px;">
+      <div class="callout-title">Polskie Zasoby</div>
+      <p>Poniższe materiały są szczególnie wartościowe dla polskich czytelników, oferując treści w języku polskim oraz uwzględniające kontekst kulturowy i edukacyjny Polski.</p>
+    </div>
+
+    <div class="resources-list">
+      <div class="resource-item">
+        <div class="resource-title">Common Sense Media: Briefingi Badawcze</div>
+        <div class="resource-meta">Organizacja · Ciągłe Badania</div>
+        <div class="resource-description">Regularne raporty na temat wzorców korzystania z mediów przez dzieci, w tym roczne dane spisowe dotyczące czasu ekranowego w różnych grupach wiekowych. Dostarcza opartych na dowodach wskazówek dla rodziców i nauczycieli dotyczących odpowiedniego wieku korzystania z technologii.</div>
+        <a href="#" class="resource-link">Odwiedź commonsensemedia.org</a>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">Center for Humane Technology</div>
+        <div class="resource-meta">Organizacja · Rzecznictwo i Edukacja</div>
+        <div class="resource-description">Zasoby na temat modeli biznesowych ekonomii uwagi i ich społecznego wpływu. Oferuje ramy do zrozumienia wzorców perswazyjnego projektowania i dostarcza narzędzi dla rodzin, nauczycieli i decydentów.</div>
+        <a href="#" class="resource-link">Odwiedź humanetech.com</a>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">Związek między czasem ekranowym a depresją</div>
+        <div class="resource-meta">JAMA Pediatrics · 2019</div>
+        <div class="resource-description">Badanie longitudinalne śledzące korzystanie z ekranów przez nastolatków i skutki dla zdrowia psychicznego. Znaleziono znaczące związki między zwiększonym korzystaniem z mediów społecznościowych i telewizji a wyższymi wskaźnikami depresji, nawet przy kontrolowaniu innych zmiennych.</div>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">„Mózg online": Jak Internet może zmieniać naszą kognicję</div>
+        <div class="resource-meta">World Psychiatry · 2019</div>
+        <div class="resource-description">Kompleksowy przegląd badający wpływ Internetu na uwagę, pamięć i poznanie społeczne. Syntetyzuje badania z neurobiologii, psychologii i psychiatrii, aby mapować, jak aktywność online wpływa na funkcjonowanie mózgu.</div>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">Technologia cyfrowa, sen i zdrowie</div>
+        <div class="resource-meta">Sleep Health Journal · 2021</div>
+        <div class="resource-description">Bada mechanizmy, poprzez które korzystanie z ekranów zakłóca sen, w tym ekspozycję na niebieskie światło, stymulację poznawczą i przemieszczony czas snu. Łączy słaby sen z kaskadowymi wpływami na zdrowie psychiczne i fizyczne.</div>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">Związki między korzystaniem z mediów ekranowych a rozwojem mózgu</div>
+        <div class="resource-meta">JAMA Pediatrics · 2019</div>
+        <div class="resource-description">Badanie obrazowania mózgu dzieci w wieku przedszkolnym pokazujące związki między większym korzystaniem z ekranów a niższą integralnością strukturalną w regionach mózgu wspierających umiejętności językowe i piśmienne.</div>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">Uzależnienie od telefonu komórkowego</div>
+        <div class="resource-meta">Młode Głowy · Artykuł edukacyjny</div>
+        <div class="resource-description">Polski przewodnik dla rodziców dotyczący rozpoznawania i radzenia sobie z uzależnieniem dzieci od telefonów komórkowych. Zawiera praktyczne wskazówki, objawy ostrzegawcze oraz strategie zapobiegania. Dostępny w języku polskim, specjalnie przygotowany dla polskich rodzin.</div>
+        <a href="https://mlodeglowy.pl/kompendium/jestem-rodzicem/uzaleznienie-od-telefonu-komorkowego/" class="resource-link" target="_blank" rel="noopener">Odwiedź mlodeglowy.pl</a>
+      </div>
+
+      <div class="resource-item">
+        <div class="resource-title">Prof. Mariusz Jędrzejko - Wywiady i materiały wideo</div>
+        <div class="resource-meta">YouTube · Materiały edukacyjne</div>
+        <div class="resource-description">Seria wywiadów i wykładów prof. Mariusza Jędrzejko na temat uzależnień behawioralnych, wpływu technologii cyfrowych na dzieci oraz praktycznych strategii dla rodziców i nauczycieli. Dostępne w języku polskim.</div>
+        <a href="https://youtu.be/-rvzoYE9mr8?is=GqD-U1UxYkjRmYXu" class="resource-link" target="_blank" rel="noopener">Zobacz wywiad na YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="practical">
+    <h2>Praktyczne Podejścia</h2>
+    <p class="section-intro">Strategie oparte na dowodach dla rodzin wdrażających zdrowsze granice technologiczne.</p>
+
+    <h3>Dla Rodziców</h3>
+    <div class="callout">
+      <p><strong>Modeluj zachowanie, które chcesz zobaczyć.</strong> Dzieci uczą się bardziej z tego, co robimy, niż z tego, co mówimy. Jeśli ciągle jesteś na telefonie, granice, które ustalisz dla nich, będą się wydawały arbitralne.</p>
+      <p><strong>Ustanów strefy i czasy wolne od telefonów.</strong> Sypialnie, pory posiłków i pierwsza godzina po szkole to powszechne punkty wyjścia. Uczyń je zasadami dla całej rodziny, a nie tylko ograniczeniami dla dzieci.</p>
+      <p><strong>Opóźnij posiadanie smartfona.</strong> Wielu ekspertów zaleca czekanie co najmniej do 14 roku życia, zaczynając zamiast tego od podstawowego telefonu, który dzwoni i wysyła SMS-y. Zobowiązanie Wait Until 8th wspiera rodziców dokonujących tego wyboru wspólnie.</p>
+      <p><strong>Współuczestnictwo w treści.</strong> Gdy młodsze dzieci korzystają z ekranów, oglądaj lub graj wraz z nimi. To przekształca pasywną konsumpcję w okazję do rozmowy i nauki.</p>
+    </div>
+
+    <h3>Dla Jednostek</h3>
+    <div class="callout">
+      <p><strong>Śledź zanim zmienisz.</strong> Użyj wbudowanych narzędzi czasu ekranowego, aby zrozumieć swoje rzeczywiste wzorce użytkowania. Większość ludzi dramatycznie niedoszacowuje swoich dziennych sum.</p>
+      <p><strong>Usuń media społecznościowe z telefonu.</strong> Korzystaj z tych platform tylko z przeglądarki komputerowej, dodając tarcie, które sprawia, że bezmyślne przewijanie staje się mniej automatyczne.</p>
+      <p><strong>Chroń swoje poranki.</strong> Nie sprawdzaj telefonu przez pierwszą godzinę po przebudzeniu. Wykorzystaj ten czas na praktyki, które ustalają twój stan umysłu (czytanie, ćwiczenia, medytacja) zamiast reagować na agendy innych.</p>
+      <p><strong>Odzyskaj nudę.</strong> Opieraj się pokusie wypełniania każdej chwili oczekiwania telefonem. Nuda to miejsce, gdzie dzieje się błądzenie myśli, kreatywność i refleksja—zdolności, które atrofiują bez praktyki.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>O Nas</h2>
+    <p class="section-intro">Informacje o zespole i projekcie.</p>
+
+    <div class="about-content">
+      <h3>Kim jesteśmy</h3>
+      <p>[Tutaj wstaw informacje o sobie lub zespole - np. rodzice, nauczyciele, badacze zainteresowani świadomym korzystaniem z technologii]</p>
+
+      <h3>Nasza misja</h3>
+      <p>[Opisz swoją misję - np. szerzyć świadomość na temat wpływu technologii cyfrowych na rozwój dzieci i dostarczać rodzicom narzędzi do podejmowania świadomych decyzji]</p>
+
+      <div class="contact-info">
+        <h3>Kontakt</h3>
+        <p>Masz pytania lub sugestie dotyczące materiałów? Skontaktuj się z nami:</p>
+
+        <form name="contact" netlify class="contact-form">
+          <p class="form-field">
+            <label for="contact-name">Imię i nazwisko</label>
+            <input type="text" id="contact-name" name="name" required />
+          </p>
+          <p class="form-field">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required />
+          </p>
+          <p class="form-field">
+            <label for="contact-message">Wiadomość</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </p>
+          <p class="form-field">
+            <button type="submit">Wyślij wiadomość</button>
+          </p>
+        </form>
+
+        <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 8px;"><strong>Inne sposoby kontaktu:</strong></p>
+          <ul style="list-style: none; padding-left: 0; margin-top: 12px;">
+            <li style="margin-bottom: 8px; font-size: 0.875rem;"><strong>Social media:</strong> <span style="color: var(--text-secondary);">[linki do profili społecznościowych]</span></li>
+            <li style="margin-bottom: 8px; font-size: 0.875rem;"><strong>Lokalizacja:</strong> <span style="color: var(--text-secondary);">[Twoje miasto/region, Polska]</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 40px;">
+        <div class="callout-title">Współpraca</div>
+        <p>Jesteś badaczem, autorem lub specjalistą w dziedzinie cyfrowego zdrowia? Chętnie porozmawiamy o współpracy lub dodaniu Twoich materiałów do naszej kolekcji zasobów.</p>
+        <p>Jeśli znasz wartościowe publikacje lub badania, które powinny znaleźć się na tej stronie, daj nam znać.</p>
+      </div>
+
+      <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border);">
+        <h3>Aktualizacje</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9375rem;">
+          Ostatnia aktualizacja: <strong>[Data]</strong><br>
+          Ta strona jest regularnie aktualizowana o nowe badania, publikacje i zasoby.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+
+<script>
+// Navigation toggle for mobile
+const navToggle = document.getElementById('navToggle');
+const navContainer = document.getElementById('navContainer');
+
+navToggle.addEventListener('click', () => {
+  navContainer.classList.toggle('open');
+});
+
+// Close nav when clicking a link on mobile
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 1024) {
+      navContainer.classList.remove('open');
+    }
+  });
+});
+
+// Close nav when clicking outside on mobile
+document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 1024) {
+    if (!navContainer.contains(e.target) && !navToggle.contains(e.target)) {
+      navContainer.classList.remove('open');
+    }
+  }
+});
+
+// Active link highlighting based on scroll position
+const sections = document.querySelectorAll('section[id], header[id]');
+const navLinksArray = Array.from(navLinks);
+
+function updateActiveLink() {
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.scrollY >= sectionTop - 200) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinksArray.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveLink);
+updateActiveLink();
+</script>
