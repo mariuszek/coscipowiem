@@ -12,14 +12,46 @@
   "navigation": {
     "sectionLabel": "Spis treści",
     "links": [
-      { "id": "introduction", "label": "Wprowadzenie", "icon": "home" },
-      { "id": "key-concepts", "label": "Kluczowe Pojęcia", "icon": "help" },
-      { "id": "who-guidelines", "label": "Wytyczne WHO", "icon": "shield" },
-      { "id": "essential-reading", "label": "Lektury Podstawowe", "icon": "book" },
-      { "id": "key-thinkers", "label": "Kluczowi Myśliciele", "icon": "users" },
-      { "id": "research", "label": "Badania i Publikacje", "icon": "document" },
-      { "id": "practical", "label": "Praktyczne Podejścia", "icon": "check" },
-      { "id": "about", "label": "O Nas & Kontakt", "icon": "info" }
+      {
+        "id": "introduction",
+        "label": "Wprowadzenie",
+        "icon": "home"
+      },
+      {
+        "id": "key-concepts",
+        "label": "Kluczowe Pojęcia",
+        "icon": "help"
+      },
+      {
+        "id": "who-guidelines",
+        "label": "Wytyczne WHO",
+        "icon": "shield"
+      },
+      {
+        "id": "essential-reading",
+        "label": "Lektury Podstawowe",
+        "icon": "book"
+      },
+      {
+        "id": "key-thinkers",
+        "label": "Kluczowi Myśliciele",
+        "icon": "users"
+      },
+      {
+        "id": "research",
+        "label": "Badania i Publikacje",
+        "icon": "document"
+      },
+      {
+        "id": "practical",
+        "label": "Praktyczne Podejścia",
+        "icon": "check"
+      },
+      {
+        "id": "about",
+        "label": "O Nas & Kontakt",
+        "icon": "info"
+      }
     ]
   },
   "hero": {
@@ -49,9 +81,24 @@
       }
     ],
     "actions": [
-      { "label": "Wytyczne WHO", "href": "#who-guidelines", "type": "primary" },
-      { "label": "Polecane książki", "href": "#essential-reading", "type": "secondary" },
-      { "label": "Praktyczne porady", "href": "#practical", "type": "secondary" }
+      {
+        "label": "Wytyczne WHO",
+        "href": "#who-guidelines",
+        "type": "primary",
+        "icon": "shield"
+      },
+      {
+        "label": "Polecane książki",
+        "href": "#essential-reading",
+        "type": "secondary",
+        "icon": "book"
+      },
+      {
+        "label": "Praktyczne porady",
+        "href": "#practical",
+        "type": "secondary",
+        "icon": "check"
+      }
     ],
     "callouts": [
       {
@@ -112,7 +159,10 @@
     "ageGroups": [
       {
         "age": "Poniżej 1. roku życia",
-        "tag": { "label": "0 minut ekranu", "type": "zero" },
+        "tag": {
+          "label": "0 minut ekranu",
+          "type": "zero"
+        },
         "icon": "📵",
         "rule": "Całkowity brak ekranów",
         "description": "Niemowlęta nie powinny mieć kontaktu z jakimikolwiek ekranami (smartfon, tablet, telewizja, laptop).",
@@ -128,10 +178,13 @@
       },
       {
         "age": "1 – 2 lata",
-        "tag": { "label": "Brak lub minimum", "type": "minimal" },
+        "tag": {
+          "label": "Brak lub minimum",
+          "type": "minimal"
+        },
         "icon": "⏱️",
         "rule": "Unikać lub drastycznie ograniczać",
-        "description": "Dla rocznych dzieci: zero ekranów. Dla 2-latków: nie więcej niż 1 godzina dziennie — zasada: im mniej, tym lepiej.",
+        "description": "Dla rocznych dzieci: zero ekranów. Dla 2-latków: nie więcej niż 1 godzina dziennie — zasada: <em>im mniej, tym lepiej</em>.",
         "reasons": {
           "title": "Kluczowe zalecenia:",
           "items": [
@@ -144,7 +197,10 @@
       },
       {
         "age": "3 – 4 lata",
-        "tag": { "label": "Maks. 1 godzina", "type": "limited" },
+        "tag": {
+          "label": "Maks. 1 godzina",
+          "type": "limited"
+        },
         "icon": "⏰",
         "rule": "Ścisły limit do 60 minut",
         "description": "Czas siedzący przed ekranem nie może przekraczać 1 godziny dziennie. Treści powinny być selektywne i omawiane z dzieckiem.",
@@ -154,13 +210,16 @@
             "Współoglądanie i aktywne komentowanie treści",
             "Wybór programów edukacyjnych o spokojnym tempie",
             "Bezwzględny brak ekranów na 1-2h przed snem",
-            "Nigdy nie używać telefonu jako „cyfrowej niani""
+            "Nigdy nie używać telefonu jako „cyfrowej niani”"
           ]
         }
       },
       {
         "age": "5+ lat",
-        "tag": { "label": "Zdrowe granice", "type": "balance" },
+        "tag": {
+          "label": "Zdrowe granice",
+          "type": "balance"
+        },
         "icon": "⚖️",
         "rule": "Świadomy kontrakt rodzinny",
         "description": "WHO zaleca stanowcze ograniczenie czasu ekranowego i priorytetyzowanie co najmniej 60 minut ruchu, zdrowego snu oraz relacji.",
@@ -178,7 +237,7 @@
     "notes": {
       "icon": "📌",
       "title": "Ważne uwagi do wytycznych",
-      "items": [
+      "content": [
         {
           "title": "Jakość treści ma kluczowe znaczenie:",
           "content": "Nie wszystkie ekrany są równe. Wolno animowany program edukacyjny oglądany wspólnie z rodzicem wywołuje zupełnie inną reakcję neurologiczną niż szybkie klipy wideo, gry z mechanizmami hazardowymi czy reklamy."
@@ -199,11 +258,14 @@
         {
           "title": "WHO Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age",
           "year": "2019",
-          "url": "https://www.who.int/publications/i/item/9789241550536"
+          "url": "https://www.who.int/publications/i/item/9789241550536",
+          "linkLabel": "who.int/publications →"
         },
         {
-          "title": "To grow up healthy, children need to sit less and play more — Komunikat prasowy WHO",
-          "url": "https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more"
+          "title": "To grow up healthy, children need to sit less and play more",
+          "url": "https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more",
+          "note": "— Komunikat prasowy WHO",
+          "linkLabel": "who.int/news →"
         }
       ]
     }
@@ -219,8 +281,16 @@
         "author": "Nicholas Carr",
         "description": "Przełomowa praca nominowana do Nagrody Pulitzera, badająca, jak internet restrukturyzuje ścieżki neuronowe, redukując zdolność do czytania głębokiego, liniowego i refleksyjnej kontemplacji.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=P%C5%82ycizny%20Nicholas%20Carr" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=P%C5%82ycizny+Nicholas+Carr" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=P%C5%82ycizny%20Nicholas%20Carr",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=P%C5%82ycizny+Nicholas+Carr",
+            "icon": "external"
+          }
         ],
         "searchTerms": "płycizny co internet robi z naszym mózgiem nicholas carr"
       },
@@ -230,8 +300,16 @@
         "author": "Johann Hari",
         "description": "Dziennikarskie śledztwo dotyczące systemowych sił niszczących naszą zbiorową zdolność skupienia. Hari podróżuje po świecie i rozmawia z czołowymi naukowcami, ujawniając kryzys uwagi jako problem cywilizacyjny.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=Skradziona%20uwaga%20Johann%20Hari" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Skradziona+uwaga+Johann+Hari" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=Skradziona%20uwaga%20Johann%20Hari",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Skradziona+uwaga+Johann+Hari",
+            "icon": "external"
+          }
         ],
         "searchTerms": "skradziona uwaga dlaczego nie możemy się skupić johann hari"
       },
@@ -241,8 +319,16 @@
         "author": "Jonathan Haidt",
         "description": "Dogłębna analiza bezprecedensowego kryzysu psychicznego pokolenia Z. Haidt udowadnia związek między powszechnym dostępem do smartfonów i mediów społecznościowych a skokiem depresji u nastolatków.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=Pokolenie%20l%C4%99ku%20Jonathan%20Haidt" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Anxious+Generation+Jonathan+Haidt" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=Pokolenie%20l%C4%99ku%20Jonathan%20Haidt",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Anxious+Generation+Jonathan+Haidt",
+            "icon": "external"
+          }
         ],
         "searchTerms": "pokolenie lęku jonathan haidt dzieci młodzież"
       },
@@ -252,8 +338,16 @@
         "author": "Adam Alter",
         "description": "Profesor psychologii z NYU ujawnia, jak interfejsy i aplikacje są z premedytacją projektowane z użyciem behawioralnych pętli nagrody, analogicznych do tych w jednorękich bandytach.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=Nie%20do%20oderwania%20Adam%20Alter" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Irresistible+Adam+Alter" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=Nie%20do%20oderwania%20Adam%20Alter",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Irresistible+Adam+Alter",
+            "icon": "external"
+          }
         ],
         "searchTerms": "nie do oderwania jak technologia nas uzależnia adam alter"
       },
@@ -263,8 +357,16 @@
         "author": "Catherine Price",
         "description": "Praktyczny 30-dniowy plan budowania zdrowej, świadomej relacji ze smartfonem. Łączy wiedzę neurobiologiczną z precyzyjnymi krokami zmniejszającymi automatyczne sięganie po ekran.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=How%20to%20Break%20Up%20with%20Your%20Phone" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=How+to+Break+Up+with+Your+Phone+Catherine+Price" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=How%20to%20Break%20Up%20with%20Your%20Phone",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=How+to+Break+Up+with+Your+Phone+Catherine+Price",
+            "icon": "external"
+          }
         ],
         "searchTerms": "how to break up with your phone catherine price zerwij z telefonem"
       },
@@ -274,8 +376,16 @@
         "author": "Cal Newport",
         "description": "Filozofia korzystania z technologii kładąca nacisk na świadome dobieranie tych narzędzi, które realnie wspierają nasze kluczowe wartości, oraz bezlitosne ignorowanie reszty cyfrowego szumu.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=Minimalizm%20cyfrowy%20Cal%20Newport" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Digital+Minimalism+Cal+Newport" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=Minimalizm%20cyfrowy%20Cal%20Newport",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Digital+Minimalism+Cal+Newport",
+            "icon": "external"
+          }
         ],
         "searchTerms": "minimalizm cyfrowy cal newport głęboka praca"
       },
@@ -285,8 +395,16 @@
         "author": "Nicholas Kardaras",
         "description": "Kliniczne spojrzenie na uzależnienie dzieci od świecących ekranów, porównujące neurochemiczne zmiany w mózgu do uzależnień od silnych substancji psychoaktywnych.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=Glow%20Kids%20Nicholas%20Kardaras" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Glow+Kids+Nicholas+Kardaras" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=Glow%20Kids%20Nicholas%20Kardaras",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Glow+Kids+Nicholas+Kardaras",
+            "icon": "external"
+          }
         ],
         "searchTerms": "glow kids nicholas kardaras uzależnienie dzieci"
       },
@@ -296,8 +414,16 @@
         "author": "Andy Crouch",
         "description": "Praktyczna mądrość dla rodzin budujących domowe rytmy i przestrzenie, które priorytetyzują bezpośrednie relacje, wspólne rozmowy i twórczość ponad bierne zaangażowanie cyfrowe.",
         "links": [
-          { "label": "Allegro", "url": "https://www.allegro.pl/listing?string=Tech%20Wise%20Family%20Andy%20Crouch" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Tech+Wise+Family+Andy+Crouch" }
+          {
+            "label": "Allegro",
+            "url": "https://www.allegro.pl/listing?string=Tech%20Wise%20Family%20Andy%20Crouch",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Tech+Wise+Family+Andy+Crouch",
+            "icon": "external"
+          }
         ],
         "searchTerms": "the tech-wise family andy crouch rodzina dom"
       },
@@ -307,8 +433,16 @@
         "author": "Nicholas Kardaras",
         "description": "Polskie wydanie fundamentalnej analizy klinicznej. Kardaras przedstawia neurologiczne mechanizmy uzależnienia u dzieci i młodzieży oraz daje konkretne narzędzia do przywrócenia równowagi.",
         "links": [
-          { "label": "Allegro", "url": "https://allegro.pl/oferta/dzieci-ekranu-jak-uzaleznienie-od-ekranu-przejmuje-kontrole-nad-dziecmi-18325472492" },
-          { "label": "Amazon", "url": "https://www.amazon.pl/s?k=Dzieci+ekranu+Nicholas+Kardaras" }
+          {
+            "label": "Allegro",
+            "url": "https://allegro.pl/oferta/dzieci-ekranu-jak-uzaleznienie-od-ekranu-przejmuje-kontrole-nad-dziecmi-18325472492",
+            "icon": "cart"
+          },
+          {
+            "label": "Amazon",
+            "url": "https://www.amazon.pl/s?k=Dzieci+ekranu+Nicholas+Kardaras",
+            "icon": "external"
+          }
         ],
         "searchTerms": "dzieci ekranu nicholas kardaras wydanie polskie"
       }
@@ -322,13 +456,13 @@
         "initials": "ST",
         "name": "Sherry Turkle",
         "specialty": "Profesor MIT · Psychologia Społeczna",
-        "bio": "Pionierska badaczka interakcji człowiek-technologia. Bada, jak urządzenia cyfrowe zmieniają jakość bezpośrednich rozmów, empatię i samotność (autorka dzieł Reclaiming Conversation oraz Alone Together)."
+        "bio": "Pionierska badaczka interakcji człowiek-technologia. Bada, jak urządzenia cyfrowe zmieniają jakość bezpośrednich rozmów, empatię i samotność (autorka dzieł <em>Reclaiming Conversation</em> oraz <em>Alone Together</em>)."
       },
       {
         "initials": "CN",
         "name": "Cal Newport",
         "specialty": "Profesor Informatyki · Georgetown University",
-        "bio": "Orędownik idei „głębokiej pracy" (Deep Work) oraz minimalizmu cyfrowego. Pokazuje, jak w świecie wszechobecnych powiadomień umiejętność wielogodzinnego skupienia staje się supermocą."
+        "bio": "Orędownik idei „głębokiej pracy” (Deep Work) oraz minimalizmu cyfrowego. Pokazuje, jak w świecie wszechobecnych powiadomień umiejętność wielogodzinnego skupienia staje się supermocą."
       },
       {
         "initials": "JT",
@@ -340,19 +474,19 @@
         "initials": "TH",
         "name": "Tristan Harris",
         "specialty": "Były Etyk Projektowania w Google · Center for Humane Tech",
-        "bio": "Współzałożyciel Center for Humane Technology, bohater głośnego dokumentu Dylemat społeczny. Z pozycji inżyniera z Doliny Krzemowej demaskuje sztuczki behawioralne przykuwające uwagę użytkowników."
+        "bio": "Współzałożyciel Center for Humane Technology, bohater głośnego dokumentu <em>Dylemat społeczny</em>. Z pozycji inżyniera z Doliny Krzemowej demaskuje sztuczki behawioralne przykuwające uwagę użytkowników."
       },
       {
         "initials": "MS",
         "name": "Manfred Spitzer",
         "specialty": "Neurobiolog · Psychiatra · Uniwersytet w Ulm",
-        "bio": "Autor pojęcia „demencji cyfrowej". Bada neuronalne mechanizmy rozwoju mózgu dzieci i młodzieży pod wpływem wczesnej ekspozycji na monitory oraz atrofii pamięci roboczej."
+        "bio": "Autor pojęcia „demencji cyfrowej”. Bada neuronalne mechanizmy rozwoju mózgu dzieci i młodzieży pod wpływem wczesnej ekspozycji na monitory oraz atrofii pamięci roboczej."
       },
       {
         "initials": "CS",
         "name": "Catherine Steiner-Adair",
         "specialty": "Psycholog Kliniczny · Harvard Medical School",
-        "bio": "Specjalistka ds. dynamiki relacji rodzinnych w świecie ekranów, autorka książki The Big Disconnect. Bada zjawisko tzw. „techno-interferencji" rodziców pochłoniętych smartfonami w obecności dzieci."
+        "bio": "Specjalistka ds. dynamiki relacji rodzinnych w świecie ekranów, autorka książki <em>The Big Disconnect</em>. Bada zjawisko tzw. „techno-interferencji” rodziców pochłoniętych smartfonami w obecności dzieci."
       },
       {
         "initials": "MJ",
@@ -369,13 +503,14 @@
     "polishCallout": {
       "icon": "🇵🇱",
       "title": "Szczególnie polecane materiały w języku polskim",
-      "content": "Materiały stworzone specjalnie z myślą o polskich rodzicach, uwzględniające polski system edukacyjny oraz codzienne wyzwania wychowawcze."
+      "content": "Materiały stworzone specjalnie z myślą o polskich rodzicach, uwzględniające polski system edukacyjny oraz codzienne wyzwania wychowawcze.",
+      "type": "emerald"
     },
     "items": [
       {
         "title": "Młode Głowy: Uzależnienie od telefonu komórkowego",
         "badge": "Przewodnik dla rodziców",
-        "description": "Kompleksowe kompendium opracowane przez ekspertów projektu „Młode Głowy" Fundacji UNAWEZA. Wyjaśnia pierwsze symptomy fonoholizmu, strategie reagowania bez agresji oraz plan bezpiecznego wprowadzania granic w domu.",
+        "description": "Kompleksowe kompendium opracowane przez ekspertów projektu „Młode Głowy” Fundacji UNAWEZA. Wyjaśnia pierwsze symptomy fonoholizmu, strategie reagowania bez agresji oraz plan bezpiecznego wprowadzania granic w domu.",
         "url": "https://mlodeglowy.pl/kompendium/jestem-rodzicem/uzaleznienie-od-telefonu-komorkowego/",
         "linkLabel": "Przeczytaj na mlodeglowy.pl"
       },
@@ -392,7 +527,7 @@
         "description": "Badanie kohortowe śledzące tysiące nastolatków na przestrzeni 4 lat. Wykazało bezpośrednią korelację między intensywnym korzystaniem z mediów społecznościowych i telewizji a nasileniem stanów lękowych i depresyjnych."
       },
       {
-        "title": "„Mózg online": Jak Internet zmienia naszą kognicję",
+        "title": "„Mózg online”: Jak Internet zmienia naszą kognicję",
         "badge": "World Psychiatry · 2019",
         "description": "Obszerny przegląd systematyczny łączący ustalenia psychiatrii, neurobiologii i psychologii poznawczej na temat tego, jak ciągły strumień hiperłączy i powiadomień degraduje zdolność do pamięci długotrwałej."
       },
@@ -458,7 +593,7 @@
           },
           {
             "title": "Usuń aplikacje social media z telefonu",
-            "content": "Zostaw dostęp do mediów społecznościowych wyłącznie na komputerze stacjonarnym. Dodanie „tarcia" eliminuje odruch sięgania po telefon z nudów."
+            "content": "Zostaw dostęp do mediów społecznościowych wyłącznie na komputerze stacjonarnym. Dodanie „tarcia” eliminuje odruch sięgania po telefon z nudów."
           },
           {
             "title": "Chroń pierwszą godzinę poranka",
@@ -501,12 +636,14 @@
     "collaborate": {
       "icon": "🤝",
       "title": "Chcesz współtworzyć ten przewodnik?",
-      "content": "Jesteś psychologiem, lekarzem, pedagogiem lub prowadzisz badania nad cyfrowym dobrostanem? Chętnie opublikujemy Twoje materiały lub dodamy wartościowe pozycje do listy. Daj nam znać przez powyższy formularz!"
+      "content": "Jesteś psychologiem, lekarzem, pedagogiem lub prowadzisz badania nad cyfrowym dobrostanem? Chętnie opublikujemy Twoje materiały lub dodamy wartościowe pozycje do listy. Daj nam znać przez powyższy formularz!",
+      "type": "emerald"
     },
     "footer": {
-      "lastUpdate": "Ostatnia aktualizacja: Październik 2026",
       "location": "Polska · Projekt non-profit",
-      "copyright": "&copy; 2026 Cyfrowe Zdrowie. Wszystkie prawa zastrzeżone. Przewodnik po świadomym korzystaniu z technologii."
+      "copyright": "© 2026 Cyfrowe Zdrowie. Wszystkie prawa zastrzeżone. Przewodnik po świadomym korzystaniu z technologii.",
+      "lastUpdateLabel": "Ostatnia aktualizacja:",
+      "lastUpdateValue": "Październik 2026"
     }
   },
   "ui": {
@@ -516,6 +653,10 @@
       "change": "Zmień"
     },
     "backToTop": "Wróć na górę strony",
-    "mobileMenuToggle": "Otwórz menu nawigacji"
+    "mobileMenuToggle": "Otwórz menu nawigacji",
+    "navLabel": "Nawigacja główna",
+    "themeToggleLabel": "Zmień motyw strony",
+    "themeToggleMobileLabel": "Przełącz motyw",
+    "bookSearchLabel": "Wyszukaj książkę"
   }
 }
