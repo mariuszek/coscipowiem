@@ -2,7 +2,8 @@
   "meta": {
     "title": "Cyfrowe Zdrowie — Przewodnik po świadomym korzystaniu z technologii",
     "description": "Zbiór badań, wytycznych WHO, literatury i praktycznych wskazówek dotyczących higieny cyfrowej i wychowania dzieci w erze ekranów.",
-    "lang": "pl"
+    "lang": "pl",
+    "version": "1.1.2"
   },
   "brand": {
     "icon": "🌿",
@@ -643,7 +644,8 @@
       "location": "Polska · Projekt non-profit",
       "copyright": "© 2026 Cyfrowe Zdrowie. Wszystkie prawa zastrzeżone. Przewodnik po świadomym korzystaniu z technologii.",
       "lastUpdateLabel": "Ostatnia aktualizacja:",
-      "lastUpdateValue": "Październik 2026"
+      "lastUpdateValue": "Październik 2026",
+      "versionLabel": "Wersja"
     }
   },
   "ui": {

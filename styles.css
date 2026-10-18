@@ -1400,6 +1400,15 @@ strong {
   color: var(--text-subtle);
 }
 
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer-version {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
